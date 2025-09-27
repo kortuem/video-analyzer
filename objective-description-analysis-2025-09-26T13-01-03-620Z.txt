@@ -1,0 +1,57 @@
+AI Video Analyzer Report
+========================
+
+Generated at: 2025-09-26T13:01:03.620Z
+Perspective: Objective Description
+
+Video Details
+------------
+Filename: street-scene-uhd_3840_2160_30fps.mp4
+Size: 21.54 MB
+Duration: 8.21 s
+Resolution: 3840×2160
+
+Comprehensive Narrative
+-----------------------
+The video opens with a wide shot of a bustling, wet street in a South Asian urban environment. The scene is filled with activity: pedestrians, cyclists, and various vehicles, including a prominent yellow auto-rickshaw and an olive-green ambulance, all navigating the crowded thoroughfare. Buildings of diverse architectural styles line the street, adorned with shops and signage, while power lines crisscross overhead. Stalls and carts are positioned along the right side of the road, contributing to the lively atmosphere.
+
+Over the brief duration of the video, the camera remains static, capturing the continuous flow of movement within the scene. The vehicles, particularly the auto-rickshaw and ambulance, progress forward along the street, becoming more prominent in the frame. Pedestrians and cyclists also advance, their positions shifting as they navigate the urban landscape. The reflections on the wet pavement subtly change, mirroring the dynamic movement of the vehicles and people.
+
+As the video concludes, the scene remains largely unchanged, but the forward progression of the vehicles and pedestrians is evident. The yellow auto-rickshaw is noticeably closer, and the overall impression is one of ongoing activity and movement within the vibrant urban setting. The video provides a brief glimpse into the everyday life and transportation dynamics of a South Asian city.
+
+Key Takeaways:
+
+*   The video showcases a typical busy street scene in a South Asian urban area.
+*   The movement of vehicles and pedestrians is a key element of the video's content.
+*   The static camera provides a fixed perspective on the dynamic environment.
+
+Key Events & Highlights
+-----------------------
+• 00:00: The initial video frame depicts a street scene in what appears to be a South Asian urban area. The street is wet, possibly from recent rain, and reflects the surrounding buildings and vehicles.
+
+People are present on both sides of the street, some walking, some riding bicycles, and others standing near shops or stalls. There are several vehicles in the frame, including a white car, a yellow auto-rickshaw, and an olive-green ambulance with the word "AMBULANCE" clearly visible on its front. Other vehicles are further down the street.
+
+The setting includes buildings of varying heights and architectural styles, with shops and signage visible along the street level. Power lines crisscross overhead. There are stalls and carts along the right side of the street. The overall impression is of a busy, somewhat congested urban environment.
+Frame 1 (00:00)
+--------------------------
+Change intensity: HIGH (100%)
+The initial video frame depicts a street scene in what appears to be a South Asian urban area. The street is wet, possibly from recent rain, and reflects the surrounding buildings and vehicles.
+
+People are present on both sides of the street, some walking, some riding bicycles, and others standing near shops or stalls. There are several vehicles in the frame, including a white car, a yellow auto-rickshaw, and an olive-green ambulance with the word "AMBULANCE" clearly visible on its front. Other vehicles are further down the street.
+
+The setting includes buildings of varying heights and architectural styles, with shops and signage visible along the street level. Power lines crisscross overhead. There are stalls and carts along the right side of the street. The overall impression is of a busy, somewhat congested urban environment.
+
+Frame 2 (00:02)
+--------------------------
+Change intensity: MODERATE (19%)
+In this frame, the most noticeable change is the forward movement of the vehicles, particularly the yellow auto-rickshaw and the olive-green ambulance. They appear closer to the viewer, indicating they are progressing along the street. The person on the bicycle also seems to be moving forward. The reflections on the wet street might have shifted slightly due to the movement of the vehicles and the changing angle of view.
+
+Frame 3 (00:05)
+--------------------------
+Change intensity: LOW (16%)
+In this frame, the most noticeable change is the forward movement of the people and vehicles. The person on the bicycle is moving forward. The auto-rickshaw is moving forward. The soldier and the person with the umbrella are also moving forward.
+
+Frame 4 (00:07)
+--------------------------
+Change intensity: LOW (16%)
+In this frame, the most noticeable change is the forward movement of the vehicles and people. The yellow auto-rickshaw has moved closer and is more prominent in the foreground. The bicycle rider is also moving forward. Additionally, the reflections on the wet road have shifted, reflecting the changing positions of the vehicles and the surrounding environment.

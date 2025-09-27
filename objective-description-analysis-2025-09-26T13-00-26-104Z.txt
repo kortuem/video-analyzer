@@ -1,0 +1,48 @@
+AI Video Analyzer Report
+========================
+
+Generated at: 2025-09-26T13:00:26.103Z
+Perspective: Objective Description
+
+Video Details
+------------
+Filename: street-scene-uhd_3840_2160_30fps.mp4
+Size: 21.54 MB
+Duration: 8.21 s
+Resolution: 3840×2160
+
+Comprehensive Narrative
+-----------------------
+The 8.21-second video presents a static shot of a bustling urban street scene, likely located in a South Asian country. The initial frame establishes the setting: a wet street reflecting the surroundings, suggesting recent rainfall. Various vehicles, including an ambulance, a white car, yellow three-wheeled vehicles, and a bicycle ridden by a man, occupy the road.
+
+Buildings with non-English signs line the street, with pedestrians visible on the sidewalks. A dense network of power lines dominates the overhead view.
+
+The video maintains this static perspective throughout its duration. The final frame, captured at the 5-second mark, mirrors the initial scene, reinforcing the impression of a typical, busy urban environment in the region, characterized by diverse transportation methods, commercial activity, and a complex infrastructure of overhead wires.
+
+Key Takeaways:
+
+*   The video depicts a common urban landscape in South Asia.
+*   The presence of an ambulance suggests potential emergency services activity in the area.
+*   The density of vehicles and pedestrians indicates a high level of activity.
+*   The overhead power lines highlight the infrastructure challenges in the region.
+
+Key Events & Highlights
+-----------------------
+• 00:00: The image shows a street scene in what appears to be a South Asian country. The street is wet, possibly from recent rain, and reflects the surroundings.
+
+Vehicles on the road include an ambulance, a white car, and several yellow three-wheeled vehicles. A man is riding a bicycle in the middle of the street.
+
+The sides of the street are lined with buildings, many of which have signs in a language other than English. There are people walking on the sidewalks and standing near the buildings. Overhead, there are numerous power lines crisscrossing the sky.
+Frame 1 (00:00)
+--------------------------
+Change intensity: HIGH (100%)
+The image shows a street scene in what appears to be a South Asian country. The street is wet, possibly from recent rain, and reflects the surroundings.
+
+Vehicles on the road include an ambulance, a white car, and several yellow three-wheeled vehicles. A man is riding a bicycle in the middle of the street.
+
+The sides of the street are lined with buildings, many of which have signs in a language other than English. There are people walking on the sidewalks and standing near the buildings. Overhead, there are numerous power lines crisscrossing the sky.
+
+Frame 2 (00:05)
+--------------------------
+Change intensity: LOW (17%)
+The video frame depicts a street scene in what appears to be an urban area. The road surface is wet, suggesting recent rain. Various modes of transportation are visible, including bicycles, cycle rickshaws, and motorized vehicles. Pedestrians are also present on the sidewalks and near the road. Buildings line both sides of the street, with a mix of architectural styles and commercial establishments. Overhead, a dense network of wires is visible, likely power and communication lines. A utility pole is located on the right side of the frame, further contributing to the cluttered overhead view. The overall impression is a bustling, possibly South Asian, urban environment.
