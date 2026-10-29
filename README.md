@@ -55,4 +55,4 @@ The GitHub Pages workflow installs dependencies with `npm ci`, builds the nested
 
 `video-analyzer/src/` contains the React app and Gemini client. The two root-level dated analysis reports are historical development outputs, not required runtime inputs or validated examples. They are retained pending an owner decision about their usefulness and sharing rights. Starter SVG assets remain as harmless unused files; the template favicon reference has been removed.
 
-Earlier documentation stated MIT licensing, but no full LICENSE file is present. This cleanup does not select or change licensing terms. The owner needs to confirm the intended notice and any separate rights for reports or other assets before those terms can be presented clearly.
+Original code and technical documentation are available under the [MIT License](LICENSE). See [RIGHTS.md](RIGHTS.md) for exclusions covering historical analysis reports and third-party assets.
