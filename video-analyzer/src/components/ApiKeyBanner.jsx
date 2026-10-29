@@ -8,7 +8,7 @@ function maskKey(key) {
 }
 
 export default function ApiKeyBanner() {
-  const { apiKey, apiKeySource, hasConfiguredKey, setApiKey, clearApiKey } = useApiKey();
+  const { apiKey, hasConfiguredKey, setApiKey, clearApiKey } = useApiKey();
   const [tempKey, setTempKey] = useState('');
   const [status, setStatus] = useState('');
 
@@ -36,12 +36,12 @@ export default function ApiKeyBanner() {
             Gemini API Key
             {hasConfiguredKey && (
               <span className="ml-2 rounded-full bg-sky-800 px-2 py-0.5 text-xs font-medium text-sky-100">
-                {apiKeySource === 'env' ? 'Loaded from environment' : 'Manual'}
+                Session key
               </span>
             )}
           </p>
           <p className="text-sky-200/80">
-            We use the key from <code className="rounded bg-slate-900 px-1 py-0.5">VITE_GEMINI_API_KEY</code> when available, otherwise you can paste a key below. Keys stay local to your browser session.
+            Enter your own key for this browser session. Analysis sends image frames and prompts to Google Gemini and may incur charges. The key is sent to Google to authenticate requests; reloading this page clears it.
           </p>
           {hasConfiguredKey && (
             <p className="text-xs text-sky-200/70">Active key: {maskKey(apiKey)}</p>
@@ -67,7 +67,7 @@ export default function ApiKeyBanner() {
               type="button"
               onClick={handleClear}
               className="rounded-lg border border-slate-500 px-3 py-2 text-sm font-medium text-slate-100 hover:border-slate-400"
-              disabled={!hasConfiguredKey || apiKeySource === 'env'}
+              disabled={!hasConfiguredKey}
             >
               Clear
             </button>

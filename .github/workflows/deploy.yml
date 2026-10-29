@@ -30,6 +30,10 @@ jobs:
         working-directory: ./video-analyzer
         run: npm ci
         
+      - name: Test and lint
+        working-directory: ./video-analyzer
+        run: npm test && npm run lint
+
       - name: Build
         working-directory: ./video-analyzer
         run: npm run build

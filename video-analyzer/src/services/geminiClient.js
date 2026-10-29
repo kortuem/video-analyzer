@@ -1,4 +1,4 @@
-const DEFAULT_MODEL = 'gemini-2.0-flash-exp';
+const DEFAULT_MODEL = 'gemini-2.5-flash';
 const BASE_URL = 'https://generativelanguage.googleapis.com/v1beta/models';
 
 function stripDataUrl(dataUrl) {
@@ -30,12 +30,44 @@ export class GeminiClient {
     this.model = model;
   }
 
+  async request(url, options) {
+    let response;
+    try {
+      response = await fetch(url, options);
+    } catch (error) {
+      if (error?.name === 'AbortError' || options.signal?.aborted) {
+        throw new DOMException('Analysis cancelled.', 'AbortError');
+      }
+      throw new Error('Unable to reach Gemini. Check your connection and try again.');
+    }
+    if (!response.ok) {
+      const hints = {
+        400: 'Check the request and selected model.',
+        401: 'Check your API key.',
+        403: 'Check your API key and account permissions.',
+        404: 'The configured model may no longer be available.',
+        429: 'Quota or rate limit reached. Check your Google account before retrying.',
+      };
+      const message = `Gemini request failed (HTTP ${response.status}). ${hints[response.status] ?? 'Try again later.'}`;
+      this.logger?.log(message, 'error');
+      throw new Error(message);
+    }
+    try {
+      return await response.json();
+    } catch (error) {
+      if (error?.name === 'AbortError' || options.signal?.aborted) {
+        throw new DOMException('Analysis cancelled.', 'AbortError');
+      }
+      throw new Error('Gemini returned an unreadable response. Try again later.');
+    }
+  }
+
   async analyzeFrame({ base64Image, prompt, abortSignal }) {
     if (!this.apiKey) {
       throw new Error('Missing Gemini API key');
     }
 
-    const url = `${BASE_URL}/${this.model}:generateContent?key=${this.apiKey}`;
+    const url = `${BASE_URL}/${this.model}:generateContent`;
     const payload = {
       contents: [
         {
@@ -58,23 +90,17 @@ export class GeminiClient {
 
     this.logger?.log('Sending frame to Gemini API');
 
-    const response = await fetch(url, {
+    const response = await this.request(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'x-goog-api-key': this.apiKey,
       },
       body: JSON.stringify(payload),
       signal: abortSignal,
     });
 
-    if (!response.ok) {
-      const errorBody = await response.json().catch(() => ({}));
-      this.logger?.log('Gemini API responded with error', 'error', errorBody);
-      const message = errorBody.error?.message ?? response.statusText;
-      throw new Error(`Gemini API error: ${message}`);
-    }
-
-    const data = await response.json();
+    const data = response;
     const candidate = data.candidates?.[0];
     const text = candidate?.content?.parts
       ?.map((part) => part.text)
@@ -92,7 +118,7 @@ export class GeminiClient {
       throw new Error('Missing Gemini API key');
     }
 
-    const url = `${BASE_URL}/${this.model}:generateContent?key=${this.apiKey}`;
+    const url = `${BASE_URL}/${this.model}:generateContent`;
     const payload = {
       contents: [
         {
@@ -105,23 +131,17 @@ export class GeminiClient {
       },
     };
 
-    const response = await fetch(url, {
+    const response = await this.request(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'x-goog-api-key': this.apiKey,
       },
       body: JSON.stringify(payload),
       signal: abortSignal,
     });
 
-    if (!response.ok) {
-      const errorBody = await response.json().catch(() => ({}));
-      this.logger?.log('Gemini summary error', 'error', errorBody);
-      const message = errorBody.error?.message ?? response.statusText;
-      throw new Error(`Gemini API error: ${message}`);
-    }
-
-    const data = await response.json();
+    const data = response;
     const candidate = data.candidates?.[0];
     const text = candidate?.content?.parts
       ?.map((part) => part.text)

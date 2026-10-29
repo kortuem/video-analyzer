@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useAppState, AnalysisStatus } from "../state/AppStateProvider.jsx";
+import { useAppState, AnalysisStatus } from "../state/appHooks.js";
 import { useAnalysisServices } from "../hooks/useAnalysisServices.js";
 
 export default function VideoPlayer({ videoRef }) {
@@ -7,15 +7,19 @@ export default function VideoPlayer({ videoRef }) {
   const { videoLoader } = useAnalysisServices();
 
   useEffect(() => {
+    const videoElement = videoRef?.current;
+    if (videoElement && videoUrl) {
+      videoElement.src = videoUrl;
+      videoElement.load();
+    }
     return () => {
-      const videoElement = videoRef?.current;
       if (videoElement) {
         videoElement.pause();
         videoElement.removeAttribute("src");
         videoElement.load();
       }
     };
-  }, [videoRef]);
+  }, [videoRef, videoUrl]);
 
   const handleLoadedMetadata = () => {
     const videoElement = videoRef?.current;
@@ -36,7 +40,6 @@ export default function VideoPlayer({ videoRef }) {
         {videoUrl ? (
           <video
             ref={videoRef}
-            src={videoUrl}
             className="h-full w-full object-contain"
             controls
             onLoadedMetadata={handleLoadedMetadata}

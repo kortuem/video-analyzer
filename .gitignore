@@ -11,7 +11,7 @@ yarn-error.log*
 .env.*
 
 # Build output
-apps/web/dist/
+/video-analyzer/dist/
 
 # Mac
 .DS_Store
